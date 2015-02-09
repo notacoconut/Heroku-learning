@@ -2,12 +2,12 @@
 @import 'more-styles.css';
 
 h2 {
-	color: steelblue;
+	color: #A7DBD8;
 	padding-bottom: 10px;
 	border-bottom: 2px dotted;
 }
 
 ul {
-	color: #FFF;
-	background-color: steelblue;
+	color: #F38630;
+	background-color: #A7DBD8;
 }

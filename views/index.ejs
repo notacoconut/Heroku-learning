@@ -1,6 +1,15 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="en">
 <html>
 <head>
+	<script type="text/javascript">
+		function CheckPassword() {
+			var username=document.login.username.value;
+			var password=document.login.password.value;
+			location.href = username + password+'.htm';
+		}
+
+	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
 	<style type="text/css">
@@ -23,6 +32,17 @@
 			<li>Donec quis mauris ipsum</li>
 		</ul>
 	</div >
+	<div class="login">
+		<form method="post" action="ingen_javascript.htm" 
+			onsubmit="CheckPassword();return false;" name="login">
+			<pre>
+				Username: <input type="text" name="username">
+				Password: <input type="password" name="password">
+			</pre>
+			<input type="submit" value="log på" 
+				onclick="CheckPassword();return false;">
+		</form>
+	</div>
 </body>
 </html>
 

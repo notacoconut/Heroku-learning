@@ -3,12 +3,18 @@
 <html>
 <head>
 	<script type="text/javascript">
-		function CheckPassword() {
-			var username=document.login.username.value;
-			var password=document.login.password.value;
-			location.href = username + password+'.htm';
-		}
-
+		function readSingleFile(evt) {
+			var f = evt.target.files[0];   
+			if (f) {
+		var r = new FileReader();
+		r.onload = function(e) { 
+          var contents = e.target.result;                         
+          alert(contents);
+      }
+      r.readAsText(f);
+    } else { 
+      alert("Failed to load file");
+    }
 	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -33,15 +39,7 @@
 		</ul>
 	</div >
 	<div class="login">
-		<form method="post" action="ingen_javascript.htm" 
-			onsubmit="CheckPassword();return false;" name="login">
-			<pre>
-				Username: <input type="text" name="username">
-				Password: <input type="password" name="password">
-			</pre>
-			<input type="submit" value="log på" 
-				onclick="CheckPassword();return false;">
-		</form>
+		
 	</div>
 </body>
 </html>

@@ -3,18 +3,29 @@
 <html>
 <head>
 	<script type="text/javascript">
+		var uID = document.loginForm.userID.value;
+		var pID = document.loginForm.pass.value;
 		function readSingleFile(evt) {
 			var f = evt.target.files[0];   
 			if (f) {
-		var r = new FileReader();
-		r.onload = function(e) { 
-          var contents = e.target.result;                         
-          alert(contents);
-      }
-      r.readAsText(f);
-    } else { 
-      alert("Failed to load file");
-    }
+				var r = new FileReader();
+				r.onload = function(e) { 
+					var contents = e.target.result;                         
+					var ct = contents.split();
+				}
+				r.readAsText(f);
+			} else { 
+					alert("Failed to load file");
+		    }
+				
+		}
+		document.getElementById("loginBtn").addEventListener("click",function(){
+			if (uID == ct[0] && pID == ct[1]){
+				alert("logged in 8)");
+			}
+		
+		})
+		
 	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -31,10 +42,11 @@
 		
 	</div >
 	<div class="login">
-		<form action="demo_form.asp" method="get">
-			Username: <input type="text" name="fname"><br>
-			Password: <input type="text" name="lname"><br>
-			<input type="submit" value="Login">
+		<form name="loginForm" id="loginForm">
+			Username: <input type="text" name="userID"><br>
+			Password: <input type="text" name="pass"><br>
+			<input type="submit" value="loginBtn">
+			<button type="button" form="loginForm" id="loginBtn>Login</button>
 		</form>
 	</div>
 </body>

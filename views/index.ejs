@@ -17,14 +17,15 @@
 		    }
 				
 		}
-		document.getElementById("loginBtn").addEventListener("click",function(){
-			var uID = document.loginForm.userID.value;
-			var pID = document.loginForm.pass.value;
-			if (uID == ct[0] && pID == ct[1]){
-				alert("logged in 8)");
-			}
-		
-		})
+		var btn = document.getElementById("loginBtn");
+		if(btn){
+			btn.addEventListener('click',function(){
+				var uID = document.loginForm.userID.value;
+				var pID = document.loginForm.pass.value;
+				if (uID == ct[0] && pID == ct[1]){
+					alert("logged in 8)");
+			}},false)
+		}
 		
 	</script>
 	<title>Adding CSS</title>

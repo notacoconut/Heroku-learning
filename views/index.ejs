@@ -5,6 +5,7 @@
 	<script type="text/javascript">
         var reader = new FileReader();
         var data = new File([""], "data.txt");
+        var ct;
         reader.onload = function(e){
             var contents = e.target.result;                         
             var ct = contents.split();

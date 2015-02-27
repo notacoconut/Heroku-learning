@@ -3,23 +3,12 @@
 <html>
 <head>
 	<script type="text/javascript">
-		function readSingleFile(evt) {
-            alert("getting files");
-			var f = evt.target.files[0];   
-			if (f) {
-                alert("file found");
-				var r = new FileReader();
-				r.onload = function(e) { 
-					var contents = e.target.result;                         
-					var ct = contents.split();
-				}
-				r.readAsText(f);
-			} else { 
-					alert("Failed to load file");
-		    }
-				
-		}
-		
+        var reader = new FileReader();
+        reader.onload = function(e){
+            var contents = e.target.result;                         
+            var ct = contents.split();
+        }
+        reader.readAsText("data.txt");
 	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -55,6 +44,7 @@
 			else{
 				alert("null :(" );
 			}
+            btn.addEventListener("click", readSingleFile())
 		</script>
 	</div>
 </body>

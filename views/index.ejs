@@ -17,19 +17,7 @@
 		    }
 				
 		}
-		var btn = document.getElementById("loginBtn");
-		if(btn){
-			btn.addEventListener('click',function(){
-				alert("Clicked!");
-				var uID = document.loginForm.userID.value;
-				var pID = document.loginForm.pass.value;
-				if (uID == ct[0] && pID == ct[1]){
-					alert("logged in 8)");
-			}},false)
-		}
-		else{
-			alert("null :(" );
-		}
+		
 	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -51,6 +39,21 @@
 			Password: <input type="text" name="pass" id="pass"><br>
 			<button type="button" form="loginForm" id="loginBtn">Login</button>
 		</form>
+		<script>
+			var btn = document.getElementById("loginBtn");
+			if(btn){
+				btn.addEventListener("click",function(){
+					alert("Clicked!");
+					var uID = document.loginForm.userID.value;
+					var pID = document.loginForm.pass.value;
+					if (uID == ct[0] && pID == ct[1]){
+						alert("logged in 8)");
+				}},false)
+			}
+			else{
+				alert("null :(" );
+			}
+		</script>
 	</div>
 </body>
 </html>

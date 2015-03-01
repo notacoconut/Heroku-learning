@@ -2,25 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="en">
 <html>
 <head>
-	<script type="text/javascript">
-        var reader = new FileReader();
-        var data = new File([""], "data.txt");
-        var ct;
-        reader.onload = function(e){
-            console.log("getting files");
-            var contents = e.target.result;
-            console.log(contents);
-            var ct = contents.split(" ");
+    <script type="text/javascript">
+        var uID;
+        var pID;
+        function getTime(){
+            return new Date().getTime();
         }
-        if (ct){
-            console.log("files gotten");
+        function calcTime(x,y){
+            return (x-y);
         }
-        reader.readAsText(data);
 	</script>
 	<title>Adding CSS</title>
 	<link rel="stylesheet" href="css/style.css">
 	<style type="text/css">
-		h1 {
+        h1 {
 			color: #F38630;
 			background-color: #A7DBD8;
 		}
@@ -37,20 +32,34 @@
 			Password: <input type="text" name="pass" id="pass"><br>
 			<button type="button" form="loginForm" id="loginBtn">Login</button>
 		</form>
+        <button type="button" id="clockIn">Clock In</button>
+        <button type="button" id="clockOut">Clock Out</button>
 		<script>
 			var btn = document.getElementById("loginBtn");
 			if(btn){
 				btn.addEventListener("click",function(){
 					
-					var uID = document.loginForm.userID.value;
-					var pID = document.loginForm.pass.value;
-					if (uID == ct[0] && pID == ct[1]){
-						alert("logged in 8)");
+					uID = document.loginForm.userID.value;
+				    pID = document.loginForm.pass.value;
+					if (uID == "hello" && pID == "world"){
+						console.log("logged in 8)");
 				}},false)
 			}
 			else{
 				console.log("null");
 			}
+            var clockInBtn = document.getElementById("clockIn");
+            var clockOutBtn = document.getElementById(clockOut);
+            clockInBtn.addEventListener("click", function(){
+                var timeIN = getTime();
+                
+            });
+            clockOutBtn.addEventListener("click", function(){
+                var timeOut = getTime();
+            } );
+            clockOutBtn.addEventListener("click",function(){
+                console.log(calcTime(timeIN,timeOut));
+            } )
 		</script>
 	</div>
 </body>

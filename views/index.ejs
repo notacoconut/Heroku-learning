@@ -38,18 +38,16 @@
         <button type="button" id="clockOut">Clock Out</button>
 		<script>
 			var btn = document.getElementById("loginBtn");
-			if(btn){
-				btn.addEventListener("click",function(){
-					
-					uID = document.loginForm.userID.value;
-				    pID = document.loginForm.pass.value;
-					if (uID == "hello" && pID == "world"){
-						console.log("logged in 8)");
-				}},false)
-			}
-			else{
-				console.log("null");
-			}
+			
+            btn.addEventListener("click",function(){
+
+                uID = document.loginForm.userID.value;
+                pID = document.loginForm.pass.value;
+                if (uID == "hello" && pID == "world"){
+                    console.log("logged in 8)");
+                }});
+			
+			
             var clockInBtn = document.getElementById("clockIn");
             var clockOutBtn = document.getElementById("clockOut");
             clockInBtn.addEventListener("click", function(){

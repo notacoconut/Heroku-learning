@@ -5,6 +5,8 @@
     <script type="text/javascript">
         var uID;
         var pID;
+        var timeIN
+        var timeOut
         function getTime(){
             return new Date().getTime();
         }
@@ -51,11 +53,11 @@
             var clockInBtn = document.getElementById("clockIn");
             var clockOutBtn = document.getElementById("clockOut");
             clockInBtn.addEventListener("click", function(){
-                var timeIN = getTime();
+               timeIn = getTime();
                 
             });
             clockOutBtn.addEventListener("click", function(){
-                var timeOut = getTime();
+                timeOut = getTime();
             } );
             clockOutBtn.addEventListener("click",function(){
                 console.log(calcTime(timeIN,timeOut));

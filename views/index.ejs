@@ -7,12 +7,13 @@
         var data = new File([""], "data.txt");
         var ct;
         reader.onload = function(e){
-            alert("getting files");
-            var contents = e.target.result;                         
+            console.log("getting files");
+            var contents = e.target.result;
+            console.log("contents");
             var ct = contents.split(" ");
         }
         if (ct){
-            alert("got files");
+            console.log("files gotten");
         }
         reader.readAsText(data);
 	</script>
@@ -48,7 +49,7 @@
 				}},false)
 			}
 			else{
-				alert("null :(" );
+				console.log("null");
 			}
 		</script>
 	</div>

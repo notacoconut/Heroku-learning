@@ -5,12 +5,15 @@
     <script type="text/javascript">
         var uID;
         var pID;
-        var timeIN
-        var timeOut
+        var timeIN;
+        var timeOut;
+        var totalTime;
         function getTime(){
             return new Date().getTime();
         }
+        
         function calcTime(x,y){
+            totalTime = totalTime + (x-y);
             return (x-y);
         }
 	</script>
@@ -36,6 +39,7 @@
 		</form>
         <button type="button" id="clockIn">Clock In</button>
         <button type="button" id="clockOut">Clock Out</button>
+        <button type="button" id="toal">Get total time</button>
 		<script>
 			var btn = document.getElementById("loginBtn");
 			
@@ -60,6 +64,10 @@
             clockOutBtn.addEventListener("click",function(){
                 console.log(calcTime(timeOut,timeIn) + " ms");
             });
+            var totalTimeBtn = doument.getElementById("total");
+            totalTimeBtn.addEventListener("click", function(){
+                console.log(totalTime);
+            })
 		</script>
 	</div>
 </body>

@@ -2,6 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="en">
 <html>
 <head>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+    </script>
+    
+    
     <script type="text/javascript">
         var uID;
         var pID;
@@ -17,16 +31,9 @@
             return (x-y);
         }
 	</script>
-	<title>Adding CSS</title>
-	<link rel="stylesheet" href="css/style.css">
-	<style type="text/css">
-        h1 {
-			color: #F38630;
-			background-color: #A7DBD8;
-		}
-	</style>
+	<title>home</title>
 </head>
-<body style="background-color: #69D2E7;">
+<body>
 	<h1>login</h1>
 	<div class="Content">
 		
@@ -39,7 +46,7 @@
 		</form>
         <button type="button" id="clockIn">Clock In</button>
         <button type="button" id="clockOut">Clock Out</button>
-        <button type="button" id="total">Get total time</button>
+        <button type="button" id="toal"><a href="http://finallyanoctopus.herokuapp.com/timecard">Get total time</a></button>
 		<script>
 			var btn = document.getElementById("loginBtn");
 			

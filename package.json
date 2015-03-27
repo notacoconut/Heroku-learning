@@ -10,9 +10,8 @@
     "express": "~4.9.8",
     "bootstrap": "~3.3.4"
     },
-    "style": "dist/css/bootstrap.css",
-    "less": "less/bootstrap.less",
-    "main": "./dist/js/npm"
-    
+    "_npmVersion": "2.5.1",
+    "_nodeVersion": "0.12.0"
+   
 }
 
